@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="client/css/style.css">
+    <!--<script data-main="client/js/app/index" src="bower_components/requirejs/require.js"></script>-->
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-websocket/angular-websocket.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="client/js/app/app.js"></script>
+    <style>
+        [ng-view] {
+            border: 1px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="app" ng-app="app" ng-controller="mainController">
+
+
+
+    <script type="text/ng-template" id="/auth.html">
+        <div class="app__template app__template--auth">
+            <div class="auth-form">
+                <form name="auth" ng-submit="submitAuth()">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h2 class="auth-form__heading">Форма авторизации {{ userToken }}</h2>
+                        </div>
+                        <!--<div class="auth-form__item">-->
+                            <!--<label class="auth-form__label" for="input-nickname">Никнейм:</label>-->
+                            <!--<input name="nickname" id="input-nickname" class="auth-form__input" placeholder="Никнейм" type="text" ng-model="nickname" required />-->
+                            <!--<p class="auth-form__error" ng-show="auth.nickname.$dirty && auth.nickname.$invalid">Ошибка в никнейме!</p>-->
+                        <!--</div>-->
+                        <div class="auth-form__item">
+                            <label class="auth-form__label" for="auth-email">Емайл:</label>
+                            <input name="email" class="auth-form__input" id="auth-email" placeholder="example@domain.com" ng-model="email" type="email" required />
+                            <p class="auth-form__error" ng-show="auth.email.$dirty && auth.email.$invalid">Email is not correct!</p>
+                            <p class="auth-form__error" ng-show="auth.email.$touched && auth.email.$error.required">Email is required!</p>
+                        </div>
+                        <div class="auth-form__item">
+                            <label class="auth-form__label" for="auth-password">Пароль:</label>
+                            <input name="password" class="auth-form__input" type="password" id="auth-password" placeholder="my_NOT_simple_password!" ng-model="password" required password-validator />
+                            <p class="auth-form__error" ng-show="auth.email.$touched && auth.email.$invalid">Password is required!</p>
+                        </div>
+                        <div class="auth-form__item auth-form__item--controls">
+                            <button class="auth-form__submit" type="submit" ng-disabled="auth.email.$invalid && auth.email.$dirty || auth.password.$invalid && auth.password.$dirty">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="/test">
+        <div class="app__template">
+            <div class="material-test">
+                sdf
+            </div>
+        </div>
+    </script>
+
+
+    <div class="app__container" >
+        <div class="app__view" ng-view></div>
+
+        <div class="chat" ng-controller="chatController" ng-if="displayChat">
+            <div class="chat__container">
+                <div class="chat__header">
+                    Header {{ userId }}
+                </div>
+                <div class="chat__history" >
+                    <div class="message" ng-repeat="m in messages">
+                        <div class="message__author"> {{ m.user }} </div>
+                        <div class="message__text"> {{ m.text }} </div>
+                        <div class="message__time"> {{ m.time }} </div>
+                    </div>
+                </div>
+                <div class="chat__form">
+                    <form name="app-chat" class="chat__form-element">
+                        <textarea name="app-chat-input" class="chat__input" ng-keyup="inputKeyDown($event)"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

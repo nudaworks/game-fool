@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,400italic,300&subset=latin,cyrillic);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition-duration: .3s; }
+
+body {
+  font: normal normal 400 16px/20px 'Fira Sans';
+  text-align: center;
+  height: 100%;
+  background: LemonChiffon; }
+
+.chat {
+  position: fixed;
+  width: 300px;
+  bottom: 0;
+  left: 0;
+  border: .0125em solid brown;
+  max-height: 80%; }
+  .chat__container {
+    position: relative;
+    height: 100%; }
+  .chat__header {
+    padding: .3em;
+    background: lightblue; }
+  .chat__history {
+    padding: .3em .3em 4.5em; }
+  .chat__form {
+    position: absolute;
+    background: orange;
+    bottom: 0;
+    width: 100%;
+    padding: .3em; }
+  .chat__input {
+    max-height: 4em;
+    width: 100%;
+    padding: .3em;
+    outline-color: #fd4a4a; }
+
+.message {
+  padding: .5em 0; }
+  .message__time {
+    color: #444; }
+
+.auth-form {
+  padding: 2.5em;
+  margin-top: 10%;
+  text-align: left;
+  display: inline-block;
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: .2em;
+  box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.37); }
+  .auth-form__heading {
+    display: block;
+    font-size: 1.2em;
+    padding: .8em 0;
+    font-weight: 500; }
+  .auth-form__item {
+    padding: .6em 0 .2em; }
+    .auth-form__item--controls {
+      margin-top: 1em;
+      text-align: center; }
+  .auth-form__label {
+    display: inline-block;
+    width: 6em; }
+  .auth-form__input {
+    padding: .6em .8em;
+    border: .125em inset #bbb;
+    outline-color: #7BF1F9; }
+  .auth-form__submit {
+    background: #DE0303;
+    border: 1px solid #D84646;
+    color: #fff;
+    border-radius: .2em;
+    font-size: 1.05em;
+    padding: .4em 2em;
+    cursor: pointer; }
+    .auth-form__submit:hover {
+      background-color: #fd4a4a; }
+  .auth-form__error {
+    color: red;
+    text-align: right;
+    padding: .4em 0;
+    font-size: .8em; }
+
+.app {
+  background: rgba(60, 60, 60, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .app__container {
+    background: rgba(130, 130, 130, 0.2);
+    min-height: 100%;
+    position: relative; }
+  .app__view {
+    background: rgba(90, 90, 90, 0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+  .app__template {
+    min-height: 100%;
+    background-size: cover; }
+    .app__template--auth {
+      background-image: url("../img/orange-gradient-abstract-2.jpg"); }

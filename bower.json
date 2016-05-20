@@ -1,0 +1,27 @@
+{
+  "name": "game-fool",
+  "description": "",
+  "main": "server/server.js",
+  "authors": [
+    "Nuda Light <nuda.light@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nudaworks/game-fool",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.5",
+    "angular": "^1.5.5",
+    "angular-cookies": "^1.5.5",
+    "angular-websocket": "^1.1.0",
+    "lodash": "^4.12.0"
+  },
+  "devDependencies": {
+    "requirejs": "^2.2.0"
+  }
+}

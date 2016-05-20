@@ -1,0 +1,36 @@
+{
+  "name": "game-fool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "dependencies": {
+    "mongodb": "^2.1.18",
+    "node-static": "^0.7.7",
+    "ws": "^1.1.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^0.8.6",
+    "bower": "^1.7.9",
+    "ejs": "*",
+    "ejs-locals": "^1.0.2",
+    "emailjs": "^1.0.4",
+    "express": "3.3.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "mongod": "^1.3.0",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.4.17",
+    "nconf": "^0.8.4",
+    "util": "^0.10.3",
+    "validator": "^5.2.0",
+    "winston": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nudaworks",
+  "license": "ISC"
+}
